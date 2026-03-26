@@ -1,14 +1,20 @@
 spring:
   application:
     name: spring-ai-rag-document-assistant
+
   ai:
     openai:
       api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini   # 👈 IMPORTANT
+
     vectorstore:
       pinecone:
-        api_key: ${PINECONE_API_KEY}
+        api-key: ${PINECONE_API_KEY}
         environment: us-east-1
         index-name: document-assistant
+
   data:
     redis:
       host: localhost
