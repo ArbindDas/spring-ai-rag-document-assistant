@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ChatController {
 
 
-    private ChatClient client;
+    private final ChatClient client;
 
 
     public ChatController(ChatClient.Builder builder){
