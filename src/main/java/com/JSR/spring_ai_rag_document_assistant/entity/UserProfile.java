@@ -1,10 +1,7 @@
-package com.JSR.spring_ai_rag_document_assistant.model;
+package com.JSR.spring_ai_rag_document_assistant.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "user_profiles")
@@ -12,6 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class UserProfile {
 
     @Id
@@ -19,7 +17,7 @@ public class UserProfile {
     private Long id;
 
     private String fullName;
-    private String avtarUrl;
+    private String avatarUrl;
     private String country;
 
     // todo -> “ Who holds the foreign key → that’s the owning side.”

@@ -1,11 +1,8 @@
-package com.JSR.spring_ai_rag_document_assistant.model;
+package com.JSR.spring_ai_rag_document_assistant.entity;
 
 import com.JSR.spring_ai_rag_document_assistant.enums.RoleName;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -16,6 +13,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class User {
 
     @Id
